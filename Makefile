@@ -3,7 +3,7 @@
 CXX=clang++-9 
 CXXFLAGS=-std=c++2a
 
-HEADERS=PhoneticFinder.hpp
+HEADERS=PhoneticFinder.hpp doctest.h
 OBJECTS=PhoneticFinder.o
 
 run: demo
