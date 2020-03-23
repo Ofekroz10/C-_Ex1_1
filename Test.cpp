@@ -6,20 +6,20 @@ using namespace phonetic;
 using namespace std;
 
 /*
-This test wrriten by python script that makes all the test by checking 
-all senarios. I wrote the script. 
-This test file test this senarios:
+This test written by python script that makes all the test by checking 
+all scenarios. I wrote the script. 
+This test file test this scenarios:
 * replacement of lower letters and another lower letters
-    (All senarios, checks all options)
+    (All scenarios, checks all options)
 * replacement of high letters and another high letters
-    (All senarios, checks all options)
+    (All scenarios, checks all options)
 
 * Mix test- replacement of high/lower letter by another high/lower letter.
-    (All senarios, checks all options)
+    (All scenarios, checks all options)
 
 * words that cannot be changed. (Like 'be')
 
-* same words. check this senario: find(text,originalWord) == originalWord
+* same words. check this scenarios: find(text,originalWord) == originalWord
 
 * Empty words
 
