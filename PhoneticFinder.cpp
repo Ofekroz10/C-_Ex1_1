@@ -35,8 +35,8 @@ string phonetic::find(string text, string word)
     
     for (string temp : *spt)
     {
-        temp = lower(temp);
-        allPermotations(temp, 0);
+        string low = lower(temp);
+        allPermotations(low, 0);
 
         for (string x : perm)
         {
