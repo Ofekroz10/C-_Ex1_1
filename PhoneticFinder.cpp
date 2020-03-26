@@ -10,6 +10,20 @@ using namespace phonetic;
 
 vector<string> perm ;
 
+string lower(string x)
+{
+    string a = "";
+    for (char& c : x)
+    {
+        char n = c;
+        if (c <= 'Z' && c >= 'A')
+             n=c - ('Z' - 'z');
+        a += n;
+    }
+    return a;
+}
+
+
 string phonetic::find(string text, string word)
 {
     if (phonetic::emptyStr(text))
@@ -21,12 +35,15 @@ string phonetic::find(string text, string word)
     
     for (string temp : *spt)
     {
+        temp = lower(temp);
         allPermotations(temp, 0);
 
         for (string x : perm)
         {
             if (x == word)
                 return temp;
+
+            cout << x << endl;
         }
         perm.clear();
     }
@@ -56,8 +73,11 @@ void phonetic::allHighCasePer(string text,int index)
     else
     {
         string withHigh = text;
-        withHigh[index] = withHigh[index] - UPPER;
-        allHighCasePer(withHigh, index + 1);
+        if (withHigh[index] > 90)
+        {
+            withHigh[index] = withHigh[index] - UPPER;
+            allHighCasePer(withHigh, index + 1);
+        }
         allHighCasePer(text, index + 1);
     }
     
